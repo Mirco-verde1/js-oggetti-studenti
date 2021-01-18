@@ -128,4 +128,4 @@ fourthStudent.eta = prompt("qual'è la tua età?")
 
 
 studentsList.push(fourthStudent);
-console.log(studentsList);
+console.log(fourthStudent);
