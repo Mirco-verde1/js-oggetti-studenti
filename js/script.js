@@ -13,6 +13,21 @@
 // }
 
 
+//QUESTA FUNZIONE MI PERMETTE DI INSERIRE IL NOME DELLA LISTA E LA POSIZIONE DELLE STUDENTE PER SAPERNE LE INFORMAZIONI;
+
+function infoStudent(studentsList, positionStudent){
+  for (var i = 0; i < studentsList.length; i++) {
+    studentsList[i];
+  }
+for(var key in positionStudent.nomeCognome)
+ var resultReserch = console.log( 'Il ' + key + " dello studente è : " + positionStudent.nomeCognome[key]);
+
+return resultReserch;
+}
+
+
+
+
 
 var primoStudente = {
   'nome': 'Angelo',
@@ -24,6 +39,8 @@ var primoStudente = {
 for(var key in primoStudente){
   console.log("Dato dello studente : " + primoStudente[key]);
 }
+
+
 
 
 
@@ -63,28 +80,36 @@ var studentsList = [                    //SECONDO ESERCIZIO
 ];
 
 
+//
+// for (var i = 0; i < studentsList.length; i++) {       //UNA VOLTA CICLATO L'ARRAY PADRE CHE CONTIENE LE INFORMAZIONI
+//   studentsList[i];                                    //MOSTRO I DATI AL SUO INTERNO
+// };
+//
+//  TODO:  //MIGLIORABILE CON AGGIUNTA DI UNA FUNZIONE
+// console.log('PRIMO');
+// for(var key in firstStudent.nomeCognome){
+//   console.log( 'Il ' + key + " dello studente è : " + firstStudent.nomeCognome[key]);
+// };
+//
+//
+// console.log('SECONDO');
+// for(var key in secondStudent.nomeCognome){
+//   console.log( 'Il ' + key + " dello studente è : " + secondStudent.nomeCognome[key]);
+// };
+//
+//
+// console.log('TERZO');
+// for(var key in tirdStudent.nomeCognome){
+//   console.log( 'Il ' + key + " dello studente è : " + tirdStudent.nomeCognome[key]);
+// };
 
-for (var i = 0; i < studentsList.length; i++) {       //UNA VOLTA CICLATO L'ARRAY PADRE CHE CONTIENE LE INFORMAZIONI
-  studentsList[i];                                    //MOSTRO I DATI AL SUO INTERNO
-};
-
- TODO:  //MIGLIORABILE CON AGGIUNTA DI UNA FUNZIONE
-console.log('PRIMO');
-for(var key in firstStudent.nomeCognome){
-  console.log( 'Il ' + key + " dello studente è : " + firstStudent.nomeCognome[key]);
-};
 
 
-console.log('SECONDO');
-for(var key in secondStudent.nomeCognome){
-  console.log( 'Il ' + key + " dello studente è : " + secondStudent.nomeCognome[key]);
-};
+infoStudent(studentsList  , firstStudent);
+infoStudent(studentsList  , secondStudent);  //IN UN SECONDO MOMENTO HO SOSTITUITO IL TUTTO CON LA FUNZIONE infoStudent;
+infoStudent(studentsList  , tirdStudent);
 
 
-console.log('TERZO');
-for(var key in tirdStudent.nomeCognome){
-  console.log( 'Il ' + key + " dello studente è : " + tirdStudent.nomeCognome[key]);
-};
 
 
 
@@ -97,7 +122,10 @@ for(var key in tirdStudent.nomeCognome){
 var fourthStudent = {};
 fourthStudent.nome = prompt("Qual'è il tuo nome?");
 fourthStudent.Cognome = prompt("qual'è il tuo cognome?") //CREO UN OGGETTO VUOTO CHE VIENE POPOLATO DALL'INPUT UTENTE
-fourthStudent.eta = prompt("qual'è la tua età?")         //SUCCESIVAMENTE L'ARRAY fourthStudent VIENE INSERITO NELLA studentsList;
+fourthStudent.eta = prompt("qual'è la tua età?")
+
+                                                            //SUCCESIVAMENTE L'ARRAY fourthStudent VIENE INSERITO NELLA studentsList;
+
 
 studentsList.push(fourthStudent);
 console.log(studentsList);
